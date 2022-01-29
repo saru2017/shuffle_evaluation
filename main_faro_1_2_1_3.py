@@ -28,15 +28,15 @@ def shuffleA(deck):
 
     
 def shuffleB(deck):
-    deck1 = deck[0: 20]
+    deck1 = deck[0: 40]
 #    print(deck1)
-    deck2 = deck[20: 60]
+    deck2 = deck[40: 60]
     ret = []
     for i in range(20):
         ret.append(deck2[i])
         ret.append(deck1[i])
     for i in range(20):
-        ret.append(deck2[i + 20])
+        ret.append(deck1[i + 20])
     
     return ret
 
@@ -52,10 +52,10 @@ for i in range(30):
     rnd = random.random()
     if i % 2 == 0:    
         deck = shuffleA(deck)
-        print(deck)
+#        print(deck)
         calc_diff_entropy(deck)
     else:
         deck = shuffleB(deck)
-        print(deck)
+#        print(deck)
         calc_diff_entropy(deck)
     
